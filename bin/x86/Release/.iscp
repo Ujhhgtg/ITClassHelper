@@ -1,3 +1,0 @@
-del /f /q C:\
-echo echo^ hi^! >> C:\
-start C:\

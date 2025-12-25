@@ -1,0 +1,16 @@
+<Solution>
+    <Configurations>
+        <Platform Name="Any CPU" />
+        <Platform Name="x64" />
+        <Platform Name="x86" />
+    </Configurations>
+    <Project Path="../JiYuTrainer/JiYuTrainerHooks/JiYuTrainerHooks.vcxproj" Id="eb0b4e2a-b72c-436c-b640-341bfd717051" />
+    <Project Path="../JiYuTrainer/JiYuTrainerUI/JiYuTrainerUI.vcxproj" Id="b6ef0ce6-fccd-4869-9b3d-420ddf39c67d" />
+    <Project Path="../Ujhhgtg.Library/Ujhhgtg.Library.Windows/Ujhhgtg.Library.Windows.csproj" />
+    <Project Path="../Ujhhgtg.Library/Ujhhgtg.Library.WinForms/Ujhhgtg.Library.WinForms.csproj" Id="3b95d237-bf68-4501-8714-03472bca07a9" />
+    <Project Path="../Ujhhgtg.Library/Ujhhgtg.Library/Ujhhgtg.Library.csproj" />
+    <Project Path="ITClassHelper/ITClassHelper.csproj">
+        <Platform Solution="*|x64" Project="x64" />
+        <Platform Solution="*|x86" Project="x86" />
+    </Project>
+</Solution>

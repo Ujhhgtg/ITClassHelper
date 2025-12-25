@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <OutputType>WinExe</OutputType>
+        <IsWebBootstrapper>false</IsWebBootstrapper>
+        <PublishUrl>publish\</PublishUrl>
+        <Install>true</Install>
+        <InstallFrom>Disk</InstallFrom>
+        <UpdateEnabled>false</UpdateEnabled>
+        <UpdateMode>Foreground</UpdateMode>
+        <UpdateInterval>7</UpdateInterval>
+        <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+        <UpdatePeriodically>false</UpdatePeriodically>
+        <UpdateRequired>false</UpdateRequired>
+        <MapFileExtensions>true</MapFileExtensions>
+        <ApplicationRevision>0</ApplicationRevision>
+        <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+        <UseApplicationTrust>false</UseApplicationTrust>
+        <BootstrapperEnabled>true</BootstrapperEnabled>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+        <SignAssembly>False</SignAssembly>
+        <Platforms>AnyCPU;x64</Platforms>
+        <StartupObject>ITClassHelper.Program</StartupObject>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+        <NeutralLanguage>zh-CN</NeutralLanguage>
+        <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+        <ApplicationManifest>Resources\app.manifest</ApplicationManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+        <OutputPath>bin\x86\Debug\</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+        <OutputPath>bin\x86\Release\</OutputPath>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="Resources\icon.ico" />
+    </ItemGroup>
+    <ItemGroup>
+        <PublishFile Include="AppIcon.ico">
+            <Visible>False</Visible>
+            <Group>
+            </Group>
+            <TargetPath>
+            </TargetPath>
+            <PublishState>Exclude</PublishState>
+            <IncludeHash>True</IncludeHash>
+            <FileType>File</FileType>
+        </PublishFile>
+    </ItemGroup>
+    <ItemGroup>
+        <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+            <Visible>False</Visible>
+            <ProductName>.NET Framework 3.5 SP1</ProductName>
+            <Install>true</Install>
+        </BootstrapperPackage>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Ookii.Dialogs.WinForms" Version="4.0.0" />
+        <PackageReference Include="Serilog" Version="4.3.1-dev-02395" />
+        <PackageReference Include="System.Management" Version="10.0.1" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\Ujhhgtg.Library\Ujhhgtg.Library.Windows\Ujhhgtg.Library.Windows.csproj" />
+      <ProjectReference Include="..\..\Ujhhgtg.Library\Ujhhgtg.Library.WinForms\Ujhhgtg.Library.WinForms.csproj" />
+      <ProjectReference Include="..\..\Ujhhgtg.Library\Ujhhgtg.Library\Ujhhgtg.Library.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Update="Properties\Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Update="Properties\Resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+</Project>
